@@ -21,3 +21,9 @@ variable "static_ip_pools" {
   }))
   default = []
 }
+
+variable "network_name" {
+  description = "Name of existing network"
+  type        = string
+  default = ""
+}

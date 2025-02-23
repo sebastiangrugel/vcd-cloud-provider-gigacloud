@@ -8,6 +8,18 @@ terraform {
 }
 
 ##################################
+# Static resources
+##################################
+
+
+data "vcd_network_routed_v2" "net" {
+  edge_gateway_id = var.edge_gateway_id
+  name            = var.network_name
+}
+
+
+/* Temporary disabled
+##################################
 # Dynamic resources
 ##################################
 
@@ -31,3 +43,6 @@ resource "vcd_network_routed_v2" "nsxt_network" {
     }
   }
 }
+*/
+
+
